@@ -12,7 +12,16 @@ public class SubjectDlg extends Dlg {
     private JTextField textField1;
 
     public SubjectDlg(){
-        setBounds(100,100,100,100);
+        setBounds(100,100,100,100);setContentPane(contentPane);
+
+        buttonOK.addActionListener(e -> {
+            ok=true;
+            setVisible(false);
+        });
+        buttonCancel.addActionListener(e -> {
+            ok = false;
+            setVisible(false);
+        });
     }
 
     @Override

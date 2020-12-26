@@ -14,11 +14,11 @@ public abstract class Dlg extends JDialog {
     public Dlg(){
 
         setModal(true);
-        getRootPane().setDefaultButton(buttonOK);
+        //getRootPane().setDefaultButton(buttonOK);
 
-        buttonOK.addActionListener(e -> onOK());
+        // buttonOK.addActionListener(e -> onOK());
 
-        buttonCancel.addActionListener(e -> onCancel());
+        // buttonCancel.addActionListener(e -> onCancel());
 
         // call onCancel() when cross is clicked
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
@@ -30,23 +30,14 @@ public abstract class Dlg extends JDialog {
 
         // call onCancel() on ESCAPE
         contentPane.registerKeyboardAction(e -> onCancel(), KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
-
-        buttonOK.addActionListener(e -> {
-            ok=true;
-            setVisible(false);
-        });
-        buttonCancel.addActionListener(e -> {
-            ok = false;
-            setVisible(false);
-        });
     }
 
-    private void onOK() {
+    protected void onOK() {
         // add your code here
         dispose();
     }
 
-    private void onCancel() {
+    protected void onCancel() {
         // add your code here if necessary
         dispose();
     }

@@ -1,5 +1,6 @@
 package view;
 
+import com.sun.tools.javac.Main;
 import model.*;
 
 import javax.swing.*;
@@ -19,9 +20,6 @@ public class MainForm {
 
     private static Object getFrame() {
         JFrame jframe  = new JFrame();
-        jframe.setVisible(true);
-        jframe.setBounds(750,750,500,500);
-        jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         return jframe;
     }
 
@@ -38,7 +36,7 @@ public class MainForm {
         tree1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+                Clicked(e);
             }
         });
         addButton.addActionListener(new ActionListener() {
@@ -136,7 +134,7 @@ public class MainForm {
         }
     }
 
-    private void mouseClicked(MouseEvent e){
+    protected void Clicked(MouseEvent e){
         if (e.getClickCount() != 3 || e.getButton() != MouseEvent.BUTTON3)
             return;
         DefaultMutableTreeNode node = getSelectedNode();

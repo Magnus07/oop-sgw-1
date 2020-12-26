@@ -13,6 +13,15 @@ public class DlgFaculty extends Dlg {
 
     public DlgFaculty(){
         setBounds(100,100,100,100);setContentPane(contentPane);
+
+        buttonOK.addActionListener(e -> {
+            ok=true;
+            setVisible(false);
+        });
+        buttonCancel.addActionListener(e -> {
+            ok = false;
+            setVisible(false);
+        });
     }
 
     @Override

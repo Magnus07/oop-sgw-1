@@ -3,6 +3,8 @@ package view;
 import model.Literature;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class LiteratureDlg extends Dlg {
     private JTextField textField2;
@@ -12,7 +14,16 @@ public class LiteratureDlg extends Dlg {
     private JTextField textField1;
 
     public LiteratureDlg(){
-        //setBounds(100,100,200,100);setContentPane(contentPane);
+        setBounds(100,100,200,100);
+        setContentPane(contentPane);
+        buttonOK.addActionListener(e -> {
+            ok=true;
+            setVisible(false);
+        });
+        buttonCancel.addActionListener(e -> {
+            ok = false;
+            setVisible(false);
+        });
     }
 
     @Override
