@@ -6,9 +6,13 @@ import javax.swing.*;
 
 public class DlgFaculty extends Dlg {
     private JTextField textField2;
+    private JPanel contentPane;
+    private JButton buttonCancel;
+    private JButton buttonOK;
+    private JTextField textField1;
 
     public DlgFaculty(){
-        setBounds(100,100,100,100);
+        setBounds(100,100,100,100);setContentPane(contentPane);
     }
 
     @Override

@@ -6,6 +6,10 @@ import javax.swing.*;
 
 public class SubjectDlg extends Dlg {
     private JTextField textField2;
+    private JPanel contentPane;
+    private JButton buttonCancel;
+    private JButton buttonOK;
+    private JTextField textField1;
 
     public SubjectDlg(){
         setBounds(100,100,100,100);

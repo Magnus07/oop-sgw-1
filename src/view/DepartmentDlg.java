@@ -6,6 +6,10 @@ import javax.swing.*;
 
 public class DepartmentDlg extends Dlg {
     private JTextField textField2;
+    private JPanel contentPane;
+    private JTextField textField1;
+    private JButton buttonOK;
+    private JButton buttonCancel;
 
     public DepartmentDlg(){
         setBounds(100,100,100,100);
