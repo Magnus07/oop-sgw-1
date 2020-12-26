@@ -14,11 +14,6 @@ public abstract class Dlg extends JDialog {
     public Dlg(){
 
         setModal(true);
-        //getRootPane().setDefaultButton(buttonOK);
-
-        // buttonOK.addActionListener(e -> onOK());
-
-        // buttonCancel.addActionListener(e -> onCancel());
 
         // call onCancel() when cross is clicked
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);

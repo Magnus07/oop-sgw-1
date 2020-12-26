@@ -12,7 +12,7 @@ public class DlgFaculty extends Dlg {
     private JTextField textField1;
 
     public DlgFaculty(){
-        setBounds(100,100,100,100);setContentPane(contentPane);
+        setBounds(100,100,400,200);setContentPane(contentPane);
 
         buttonOK.addActionListener(e -> {
             ok=true;

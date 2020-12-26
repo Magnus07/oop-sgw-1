@@ -12,7 +12,7 @@ public class DepartmentDlg extends Dlg {
     private JButton buttonCancel;
 
     public DepartmentDlg(){
-        setBounds(100,100,100,100);setContentPane(contentPane);
+        setBounds(100,100,400,200);setContentPane(contentPane);
 
         buttonOK.addActionListener(e -> {
             ok=true;

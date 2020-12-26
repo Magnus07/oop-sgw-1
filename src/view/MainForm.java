@@ -29,8 +29,9 @@ public class MainForm {
     private JButton editButton;
     private JButton storeButton;
     private JButton restoreButton;
-    private JButton specificFunctionsButton;
+    private JButton countLiteratureByYearButton;
     private JPanel Pane;
+    private JButton findLitByPublisherButton;
 
     public MainForm() {
         tree1.addMouseListener(new MouseAdapter() {
@@ -69,13 +70,27 @@ public class MainForm {
                 onRestore();
             }
         });
+        countLiteratureByYearButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (getSelectedNode() != null)
+                    new LiteratureByYearDlg(getSelectedNode());
+            }
+        });
+        findLitByPublisherButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (getSelectedNode() != null)
+                    new SearchByPublisherOrAuthorDlg(getSelectedNode());
+            }
+        });
     }
 
     protected TreeModel getStartModel() throws Exception{
         Faculty f = new Faculty("NNIEIT", "Ivanets S.A.");
         Department d = new Department("ITSE", "Bilous");
         Subject s = new Subject("OOP","Byvoino T.P.");
-        Literature l = new Literature("How to write a better code in Java using OOP", "Pinchuk S.S.");
+        Literature l = new Literature("How to write a better code in Java using OOP", "Pinchuk S.S.", 2020, "Pinchuk Publisher House");
 
         DefaultMutableTreeNode root = new DefaultMutableTreeNode(f);
         DefaultMutableTreeNode dNode = new DefaultMutableTreeNode(d);
