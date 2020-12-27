@@ -10,6 +10,7 @@ public class DepartmentDlg extends Dlg {
     private JTextField textField1;
     private JButton buttonOK;
     private JButton buttonCancel;
+    private JTextField textField3;
 
     public DepartmentDlg(){
         setBounds(100,100,400,200);setContentPane(contentPane);
@@ -29,7 +30,8 @@ public class DepartmentDlg extends Dlg {
         if (!ok) return null;
         String name = textField1.getText();
         String head = textField2.getText();
-        return new Department(name, head);
+        short floor = Short.valueOf(textField3.getText());
+        return new Department(name, head, floor);
     }
 
     public DepartmentDlg(Object data){
@@ -37,5 +39,6 @@ public class DepartmentDlg extends Dlg {
         Department f = (Department) data;
         textField1.setText(f.name);
         textField2.setText(f.head);
+        textField3.setText(String.valueOf(f.floor));
     }
 }

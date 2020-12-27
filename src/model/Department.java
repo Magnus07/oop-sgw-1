@@ -7,8 +7,10 @@ import view.SubjectDlg;
 
 public class Department extends CommonData {
     public String head;
-    public Department(String name, String head){
-        this.name = name;this.head=head;
+    public short  floor;
+
+    public Department(String name, String head, short floor){
+        this.name = name;this.head=head;this.floor=floor;
     }
 
     public Dlg showDialog(boolean b){

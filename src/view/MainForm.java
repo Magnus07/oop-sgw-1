@@ -88,7 +88,7 @@ public class MainForm {
 
     protected TreeModel getStartModel() throws Exception{
         Faculty f = new Faculty("NNIEIT", "Ivanets S.A.");
-        Department d = new Department("ITSE", "Bilous");
+        Department d = new Department("ITSE", "Bilous", (short) 5);
         Subject s = new Subject("OOP","Byvoino T.P.");
         Literature l = new Literature("How to write a better code in Java using OOP", "Pinchuk S.S.", 2020, "Pinchuk Publisher House");
 
